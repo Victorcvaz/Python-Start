@@ -131,3 +131,18 @@ print('\033[1;36m~\033[m' * (len(result)+4))
 print(f"{result:^{len(result)+4}}")
 print('\033[1;36m~\033[m' * (len(result)+4))
 """
+
+# Challenge 102 
+
+"""
+def fatorial(fat, show=0):
+    c = fat-1
+    for f in range(c, 0, -1):
+        fat *= f
+        if show:
+            print(f"\033[1;35m{f+1}!\033[m", end="\033[1;32m x \033[m")
+    if show:
+        print(f"\033[1;35m1!\033[m", end="\033[1;32m = \033[m")
+    print(f"\033[1;31m{fat}\033[m")
+fatorial(5, True)
+"""
