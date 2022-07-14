@@ -312,3 +312,44 @@ def helpF(method=0):
 helpF()
 print("\033[1;36mShutting down\033[m")
 """
+
+### Second Resolution 106 ###
+
+"""
+c = (   '\033[m',         # 0 - without colors
+        '\033[1;30;41m',  # 1 - red
+        '\033[1;30;42m',  # 2 - green
+        '\033[1;30;43m',  # 3 - yellow
+        '\033[1;30;44m',  # 4 - blue
+        '\033[1;30;45m',  # 5 - magenta
+        '\033[1;30;46m',  # 6 - cyan
+        '\033[7;30m'      # 7 - white
+);
+
+def HELP(content):
+    TITLE(f"Acess the manual of the comand \'{content}\'",4)
+    print(c[7], end='')
+    help(content)
+    print(c[6], end='')
+    
+def TITLE(msg, color=0):
+    weight = len(msg) + 4
+    print(c[color], end='')
+    print("~" * weight)
+    print(f"   {msg}")
+    print("~" * weight)
+    print(c[0], end='')    
+
+# Main Program
+comand = ''
+while True:
+    print()
+    TITLE('System of help PYHELP', 2)
+    print()
+    comand = str(input("function or library -> "))
+    if comand.upper() == 'END':
+        break
+    else:
+        HELP(comand)
+TITLE('See you Soon!', 5)
+"""
