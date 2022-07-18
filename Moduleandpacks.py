@@ -40,15 +40,15 @@ print(f"\033[1;34mThe double of {num} is {Numbers.double(num)}\033[m")
 # Challenge 111 Reuse created module 
 # Challenge 112 Reuse created module and validation
 #  
-from Package.Coin import coin
-from Package.Dice import datas
+from PackModules.Coin import coin
+from PackModules.Data import data
 
 show = n = i = d = 0
 
-n = datas.format("Enter the price: R$ ")
-i = datas.format("Enter the value you'll want to increase in percent: ")
-d = datas.format("Enter the value you'll want to decrease in percent: ")
-show = datas.validation("Do you want to show formatted values? [Y/N] ")
+n = data.format("Enter the price: R$ ")
+i = data.format("Enter the value you'll want to increase in percent: ")
+d = data.format("Enter the value you'll want to decrease in percent: ")
+show = data.validation("Do you want to show formatted values? [Y/N] ")
 coin.summary(num=n, percenti=i, percentd=d, show=show)
 
 
