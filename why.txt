@@ -1,0 +1,10 @@
+Maria;28
+Pedro;19
+Mago;29
+Livia;15
+Keny;29
+Beatriz;19
+Martha;89
+Andreza;69
+Cesar;12
+Guilheme;22

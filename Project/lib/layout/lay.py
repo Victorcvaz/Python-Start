@@ -1,4 +1,4 @@
-import lib.archive.validnum as vn
+import lib.archive.validata as vn
 
 def line(c=0,wei=42):
     if c == 0:
@@ -48,6 +48,6 @@ def header(txt, c=0, cl=0):
 def menu(list):
     header("MAIN MENU", 6, 6)
     for i, item in enumerate(list):
-        print(f"\033[1;33m{i+1}\033[m - \033[1;34m{item}\033[m")
-    opc = vn.readint("Your option: ")
+        print(f"\033[1;33m{i+1}\033[m - \033[0;34m{item}\033[m")
+    opc = vn.readint("\033[33mYour option: \033[m")
     return opc
